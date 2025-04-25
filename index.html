@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byron's Calorie Surplus/Deficit Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Byron's Calorie Surplus/Deficit Calculator</h1>
+        <div class="calculator">
+            <label for="unit">Choose your unit:</label>
+            <select id="unit" onchange="resetInputs()">
+                <option value="metric">Metric (kg)</option>
+                <option value="imperial">Imperial (lb)</option>
+            </select>
+
+            <div class="input-section">
+                <label for="week1Weight">Average weight for week 1:</label>
+                <input type="number" id="week1Weight" placeholder="Enter weight for week 1">
+            </div>
+            
+            <div class="input-section">
+                <label for="week2Weight">Average weight for week 2:</label>
+                <input type="number" id="week2Weight" placeholder="Enter weight for week 2">
+            </div>
+
+            <button id="calculate" onclick="calculateCalories()">Calculate</button>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
